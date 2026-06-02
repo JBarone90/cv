@@ -1,0 +1,8 @@
+services:
+  latex:
+    image: texlive/texlive:latest-full
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    command: >
+      sh -c "xelatex Jacopo_cv.tex && xelatex Jacopo_cv.tex"

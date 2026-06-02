@@ -1,0 +1,1 @@
+Source for Jacopo Barone's CV, built with [Awesome-CV](https://github.com/posquit0/Awesome-CV) (XeLaTeX, two-column layout). Compile locally with `.\build.ps1` (requires Docker) or download the PDF artifact from GitHub Actions.

@@ -1,0 +1,98 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% Modified by: Jacopo Barone
+% Changes: Added two-column layout using paracol for Experience (left) and Skills + Education (right)
+%
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+\colorlet{awesome}{awesome-red}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% Social info separator
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Jacopo}{Barone}
+\position{Data Scientist{\enskip\cdotp\enskip}Researcher}
+\github{JBarone90}
+\linkedin{baronej}
+\googlescholar{6qfEIzIAAAAJ}{Jacopo Barone}
+\email{baronej1990@gmail.com}
+
+%-------------------------------------------------------------------------------
+%	BIBLIOGRAPHY CONFIG
+%-------------------------------------------------------------------------------
+% \usepackage[sorting=ydnt, style=authoryear]{biblatex}
+% \addbibresource{references.bib}
+% \usepackage{bibspacing}
+% \setlength{\bibitemsep}{.6\baselineskip plus .05\baselineskip minus .04\baselineskip}
+
+%-------------------------------------------------------------------------------
+%	ADDED PACKAGES FOR TWO-COLUMN LAYOUT
+%-------------------------------------------------------------------------------
+\usepackage{paracol} % Enables multi-column environment
+\usepackage{tabularx}  % X column that auto-fits the remaining width
+\usepackage{array}     % p/m/b column types + array tweaks
+\usepackage{multirow}  % \multirow for spanning rows
+\usepackage{graphicx}  % \includegraphics
+\columnratio{0.6,0.4} % Adjust column width ratio: 60% left, 40% right
+\setlength{\columnsep}{1cm} % Space between columns
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Header and footer
+\makecvheader
+\makecvfooter{} {Jacopo Barone~~~·~~~Curriculum Vitae} {\thepage}
+
+%-------------------------------------------------------------------------------
+%	CV CONTENT IN TWO COLUMNS
+%-------------------------------------------------------------------------------
+% We use paracol to split the page into two columns:
+% Column 1 (left): Experience
+% Column 2 (right): Skills and Education stacked vertically
+\begin{paracol}{2}
+
+% LEFT COLUMN: EXPERIENCE
+% This will occupy the first column
+\input{cv/experience.tex}
+
+% Switch to the second column
+\switchcolumn
+
+% RIGHT COLUMN: SKILLS AND EDUCATION
+% Both sections will appear stacked in the second column
+\input{cv/skills.tex}
+\input{cv/education.tex}
+
+
+\end{paracol}
+
+%-------------------------------------------------------------------------------
+%	OPTIONAL SECTIONS (COMMENTED OUT)
+%-------------------------------------------------------------------------------
+% \input{cv/extracurricular.tex}
+% \input{cv/honors.tex}
+% \input{cv/presentation.tex}
+% \input{cv/writing.tex}
+% \input{cv/committees.tex}
+% \input{cv/publications.tex}
+
+%-------------------------------------------------------------------------------
+\end{document}
