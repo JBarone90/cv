@@ -58,14 +58,19 @@ Use a single reusable `draft` branch for active tailoring. The full history is p
 # Start a new application
 git checkout main && git checkout -b draft
 
-# Tailor, build, review…
+# Tailor the CV files, then commit the changes
+git add cv/summary.tex cv/experience.tex  # (and any other modified files)
+git commit -m "chore: tailor for <company> <role>"
 
-# When ready to submit — tag the state, then delete the branch
-git tag sent/<company>-<role-slug>-<YYYY-MM>
+# Tag the tailored commit (while still on draft, before switching back)
+git tag -a sent/<company>-<role-slug>-<YYYY-MM> -m "applied <date>"
+
+# Return to main and delete the branch
+# The tag preserves the tailored commit permanently — main is untouched
 git checkout main && git branch -d draft
 ```
 
-The branch list stays clean (`main` only). Tags are the permanent record of every submission.
+The branch list stays clean (`main` only). The tag points to the tailored commit directly, not to the branch, so deleting `draft` does not affect it. Run `git checkout sent/<company>-<role-slug>-<YYYY-MM>` at any point to inspect or rebuild the exact PDF that was submitted.
 
 ### Tailoring steps
 1. **Profile summary** (`cv/summary.tex`) — rewrite to mirror the JD's language; this is the highest-leverage change
