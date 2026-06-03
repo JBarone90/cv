@@ -1,7 +1,4 @@
 #!/usr/bin/env python3
-# /// script
-# dependencies = ["pdfplumber", "python-docx"]
-# ///
 """Extract plain text from a PDF or Word file and print to stdout."""
 
 import sys
