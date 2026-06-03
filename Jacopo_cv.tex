@@ -30,7 +30,8 @@
 %	PERSONAL INFORMATION
 %-------------------------------------------------------------------------------
 \name{Jacopo}{Barone}
-\position{Data Scientist{\enskip\cdotp\enskip}Researcher}
+\position{Data Scientist{\enskip\cdotp\enskip}Neuroscientist}
+\extrainfo{\href{https://jbarone90.github.io/neuromancer}{\faGlobe}}
 \github{JBarone90}
 \linkedin{baronej}
 \googlescholar{6qfEIzIAAAAJ}{Jacopo Barone}
@@ -51,6 +52,12 @@
 \usepackage{array}     % p/m/b column types + array tweaks
 \usepackage{multirow}  % \multirow for spanning rows
 \usepackage{graphicx}  % \includegraphics
+
+% Show only icons in the header — gobble the text label that follows each icon
+\newcommand{\ignoretoken}[1]{}
+\renewcommand{\acvHeaderIconSep}{\ignoretoken}
+% Increase social icon size (default 6.8pt is too small)
+\renewcommand{\headersocialstyle}[1]{{\fontsize{9pt}{1em}\headerfont\color{text} #1}}
 
 % Override cvskills to keep label and content on the same line
 \renewenvironment{cvskills}{
