@@ -30,6 +30,10 @@ This runs `xelatex Jacopo_cv.tex` twice inside `texlive/texlive:latest-full` and
 | `logos/` | Institution/company logos used in entries |
 | `references.bib` | BibTeX entries (biblatex wiring is commented out) |
 
+## Writing rule
+
+**Always run `/writing-coach` after writing or editing any prose** — CV content (`cv/summary.tex`, `cv/experience.tex`) or the README. Do not commit prose changes without a writing-coach pass first.
+
 ## Content integrity
 
 - **Never fabricate** — do not invent metrics, achievements, tools, or responsibilities Jacopo did not perform. Reframing and emphasising real work is encouraged; crossing into fiction is not.
