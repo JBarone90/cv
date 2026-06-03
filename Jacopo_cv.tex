@@ -51,6 +51,13 @@
 \usepackage{array}     % p/m/b column types + array tweaks
 \usepackage{multirow}  % \multirow for spanning rows
 \usepackage{graphicx}  % \includegraphics
+
+% Override cvskills to keep label and content on the same line
+\renewenvironment{cvskills}{
+  \begin{description}[style=sameline]
+}{
+  \end{description}
+}
 %-------------------------------------------------------------------------------
 \begin{document}
 
