@@ -31,7 +31,7 @@
 %-------------------------------------------------------------------------------
 \name{Jacopo}{Barone}
 \position{Data Scientist{\enskip\cdotp\enskip}Neuroscientist}
-\extrainfo{\href{https://jbarone90.github.io/neuromancer}{\faGlobe}}
+\homepage{jbarone90.github.io/neuromancer}
 \github{JBarone90}
 \linkedin{baronej}
 \googlescholar{6qfEIzIAAAAJ}{Jacopo Barone}
@@ -56,6 +56,8 @@
 % Show only icons in the header — gobble the text label that follows each icon
 \newcommand{\ignoretoken}[1]{}
 \renewcommand{\acvHeaderIconSep}{\ignoretoken}
+% Replace house icon with globe for the homepage/portfolio entry
+\let\faHome\faGlobe
 % Increase social icon size (default 6.8pt is too small)
 \renewcommand{\headersocialstyle}[1]{{\fontsize{9pt}{1em}\headerfont\color{text} #1}}
 
@@ -88,7 +90,7 @@
 % \input{cv/presentation.tex}
 % \input{cv/writing.tex}
 % \input{cv/committees.tex}
-\input{cv/publications.tex}
+% \input{cv/publications.tex}
 
 %-------------------------------------------------------------------------------
 \end{document}
