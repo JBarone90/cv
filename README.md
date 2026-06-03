@@ -1,6 +1,6 @@
-# Jacopo Barone — CV
+# Jacopo Barone's CV
 
-XeLaTeX source for Jacopo Barone's CV, built with [Awesome-CV](https://github.com/posquit0/Awesome-CV). Single-column, one-page layout targeting Data Science and Neuroscience roles.
+XeLaTeX source for Jacopo Barone's CV, built with [Awesome-CV](https://github.com/posquit0/Awesome-CV). Single-column, one-page layout for Data Science and Neuroscience roles.
 
 ## Build
 
@@ -14,7 +14,7 @@ Outputs `Jacopo_cv.pdf`. GitHub Actions builds and uploads the PDF artifact on e
 
 ## Applying for a role
 
-`main` holds the master CV — all content available via commented-out blocks. For each application:
+`main` holds the master CV; all content is available via commented-out blocks. For each application:
 
 1. `git checkout -b draft`
 2. Use the Claude Code agents to tailor:
