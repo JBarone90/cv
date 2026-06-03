@@ -45,15 +45,12 @@
 % \setlength{\bibitemsep}{.6\baselineskip plus .05\baselineskip minus .04\baselineskip}
 
 %-------------------------------------------------------------------------------
-%	ADDED PACKAGES FOR TWO-COLUMN LAYOUT
+%	ADDED PACKAGES
 %-------------------------------------------------------------------------------
-\usepackage{paracol} % Enables multi-column environment
 \usepackage{tabularx}  % X column that auto-fits the remaining width
 \usepackage{array}     % p/m/b column types + array tweaks
 \usepackage{multirow}  % \multirow for spanning rows
 \usepackage{graphicx}  % \includegraphics
-\columnratio{0.6,0.4} % Adjust column width ratio: 60% left, 40% right
-\setlength{\columnsep}{1cm} % Space between columns
 %-------------------------------------------------------------------------------
 \begin{document}
 
@@ -62,27 +59,11 @@
 \makecvfooter{} {Jacopo Barone~~~·~~~Curriculum Vitae} {\thepage}
 
 %-------------------------------------------------------------------------------
-%	CV CONTENT IN TWO COLUMNS
+%	CV CONTENT
 %-------------------------------------------------------------------------------
-% We use paracol to split the page into two columns:
-% Column 1 (left): Experience
-% Column 2 (right): Skills and Education stacked vertically
-\begin{paracol}{2}
-
-% LEFT COLUMN: EXPERIENCE
-% This will occupy the first column
 \input{cv/experience.tex}
-
-% Switch to the second column
-\switchcolumn
-
-% RIGHT COLUMN: SKILLS AND EDUCATION
-% Both sections will appear stacked in the second column
 \input{cv/skills.tex}
 \input{cv/education.tex}
-
-
-\end{paracol}
 
 %-------------------------------------------------------------------------------
 %	OPTIONAL SECTIONS (COMMENTED OUT)
